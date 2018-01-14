@@ -265,3 +265,123 @@ Like this:
 DELETE FROM `creature` WHERE (`id` = '400');
 INSERT INTO `creature` (`id`,`map`) VALUES ('400' , '530'); 
 ```
+**Sorting and limiting the resoult:**
+Imagine you want to see all creatures on creature table from lowest NPC ID to highest NPC ID:
+```sql
+SELECT * FROM `creature` ORDER BY `id`;
+```
+As you can the sorting is based on id field and ORDER BY is a new keyword here.
+Sometimes we have two creatures with the same ID.
+For example, we want to see all creatures on creature table from lowest NPC ID to highest NPC ID and if we have same NPC ID on some creatures second sort priority should be areaId:
+```sql
+SELECT * FROM `creature` ORDER BY `id`,`areaId`;
+```
+Also, we can add more fields, just need to separate them with a ",".
+Attention: This will sort the results, not the table itself.
+"What if we want to see the results from highest ID to lowest ID?"
+We can just add a "DESC":
+```sql
+SELECT * FROM `creature` ORDER BY `id` DESC;
+```
+DESC stands for descending and will reverse the result.
+We can still add conditions:
+This show all creatures with ID 1412 and also will sort the result.
+```sql
+SELECT * FROM `creature` WHERE `id` = 1412 ORDER BY `guid`;
+```
+***Limiting:***
+When are using SELECT and searching in a table especially in a large table like creature table, you will see many rows each time you search.
+You can use LIMIT to make limitations.
+This will show you only 5 creatures with NPC ID 1412:
+```sql
+SELECT * FROM `creature` WHERE `id` = 1412 LIMIT 5;
+```
+Imagine you have many duplicated numbers on a column (Like spawntimesecs on creature table, there are many 120, 300, etc...). And you want to see each number just once, also you want to sort the results. In other words, you want to delete duplicated numbers in results and sort the results.
+For example, you have:
+```
+3
+2
+3
+4
+5
+3
+1
+```
+And you want it like this:
+```
+1
+2
+3
+4
+5
+```
+It's pretty simple.
+Here we need to use GROUP BY, like this:
+```sql
+SELECT * FROM `creature` GROUP BY `spawntimesecs`;
+```
+Again just like ORDER BY you can add your own conditions.
+This one will sort the results based on position_x for all creatures with ID 6491, also this will remove all duplicated numbers on position_x in your SELECT results.
+```sql
+SELECT * FROM `creature` WHERE `id` = 6491 GROUP BY `position_x`;
+```
+Also just like ORDER BY you can add DESC to the query.
+As you can see there is a difference between ORDER BY and GROUP BY. both of them will sort the result but GROUP BY will also hide the duplicated query results.
+**Variables:**
+A dish, a container. Imagine you have a container you can always fill it with some stuff and move these stuff from a container or another one.
+These containers should save all their data on memory and this will consume your RAM space.
+There are many types of containers so there are many types of variables.
+How to use a variable:
+```sql
+SET @Myvariable = 100;
+```
+SET: Keyword to assign a value to the variable.
+@Myvariable: Variable name, must start with @, can't use the forbidden stuff such as a free space.
+= 100: the value you want to set to the variable.
+Note: you can also re-assign another value to the variable:
+```sql
+SET @Myvariable = 100;
+SET @Myvariable = 200;
+```
+Now the value of @Myvariable will be 200 because we just did an overwriting.
+"What's the point of using variables?"
+Check the query here:
+```sql
+SET @Myvariable = 15197;
+SELECT * FROM `creature` WHERE `id` = @Myvariable;
+```
+instead of using values in SQL queries we can use variables.
+You can also use mathematical stuff on variables:
+```sql
+SET @Myvariable1 = 1500;
+SET @Myvariable2 = 197;
+SET @Myvariable3 = @Myvariable2 + @Myvariable1;
+```
+Here the value of @Myvariable will be 15197.
+**Commenting:**
+If you know other programming languages it's really easy for you to understand this part.
+Imagine you wrote an SQL file with more than 1K SQL lines, you give the file to another person and he should also add or edit some queries. In this case, you have to add some texts/notes on your it, we call these notes comments.
+When you are executing your queries the comment part will **not** execute.
+**Using comments:**
+There are two methods:
+First method:
+```sql
+-- This is the note we were talking about it.
+```
+Second method:
+```sql
+/*
+This is the note we were talking about it.
+*/
+```
+Obviously, the second method is better to use for multiline comments and the first one is better for a single line of comment:
+```sql
+-- Note is here
+-- test note
+-- comment here
+```
+```sql
+/* Note is here
+test note
+comment here */
+```
