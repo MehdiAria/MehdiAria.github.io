@@ -44,9 +44,9 @@ Explanation:
 Example:
 Wrong type:
 ```sql
-SELECT * FROM creature WHERE id = 32928;
-SELECT * FROM creature WHERE id = 32927;
-=
+SELECT * FROM creature WHERE id = 32928
+SELECT * FROM creature WHERE id = 32927
+This query equals to:
 SELECT * FROM creature WHERE id = 32928SELECT * FROM creature WHERE id = 32927
 ```
 Correct type:
