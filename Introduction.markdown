@@ -83,8 +83,8 @@ Explanation:
 Example:
 Wrong type:
 ```sql
-SELECT * FROM creature WHERE id = 32928
-SELECT * FROM creature WHERE id = 32927
+SELECT * FROM creature WHERE id = 32928;
+SELECT * FROM creature WHERE id = 32927;
 =
 SELECT * FROM creature WHERE id = 32928SELECT * FROM creature WHERE id = 32927
 ```
@@ -115,5 +115,21 @@ SELECT * FROM creature WHERE id IN (24248, 36597);
 As you can see here we are using "IN" instead of = mark.
 We can even add more IDs. For example: 
 ```sql
-SELECT * FROM creature WHERE id IN (24248, 36597,32928 );
+SELECT * FROM creature WHERE id IN (24248, 36597,32928);
 ```
+There are many other keywords you can use in your condition.
+For example Or, Not, etc...
+We want to see the position_x for NPC 36597:
+<picture>
+<img src="https://cdn.discordapp.com/attachments/369829063877066752/372066688029425666/9.JPG" alt="" style="width:auto;">
+</picture>
+Here you will see some problem with the result!
+We have many fields and have to scroll right and left to find the position_x value.
+There is a simple solution to this problem:
+As you understood before * means "ALL".
+Now we are going to change it:
+```sql
+SELECT position_x FROM creature WHERE id = 36597;
+```
+As you can see here we used position_x instead of (*) star mark because we just want to see the value of position_x, not all fields.
+We can even combine.
