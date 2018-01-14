@@ -149,4 +149,4 @@ Use ` on table names and field names.
 Use ' on numeric values, and you can use " for text string values.
 Try to separate the condition with )(.
 here you can find more information about SELECT:
-https://www.w3schools.com/sql/sql_select.asp
+[https://www.w3schools.com/sql/sql_select.asp](https://www.w3schools.com/sql/sql_select.asp)
