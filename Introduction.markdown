@@ -74,9 +74,46 @@ Click on "Execute SQL..." (Marked on the picture below) - Or you can press F9.
 Using this query you can find all spawned NPCs with 32928.
 Explanation:
 1. SELECT: It's a Keyword and you have to write it exactly like this.
-2. * : Star mark means "ALL": As you could see in the previous picture you could see "ALL" fields. (Will be explained later).
+2. Star symbol: Star mark means "ALL": As you could see in the previous picture you could see "ALL" fields. (Will be explained later).
 3. FROM: Another keyword.
 4. creature: This is your table name.
 5. WHERE: This is another keyword, after "WHERE" you have to write your condition.
 6. id = 32928: the condition. For example, if you have too many data on your table and you want to see just data with ID 32928 you have to use conditions and filter the output.
 7. ";" : Don't forget to finish all your query lines with";" mark. If you don't put the ";" your query line won't end up.
+Example:
+Wrong type:
+```SQL
+SELECT * FROM creature WHERE id = 32928
+SELECT * FROM creature WHERE id = 32927
+=
+SELECT * FROM creature WHERE id = 32928SELECT * FROM creature WHERE id = 32927
+```
+Correct type:
+```SQL
+SELECT * FROM creature WHERE id = 32928;
+SELECT * FROM creature WHERE id = 32927;
+```
+More examples:
+This will give you all results with GUID 314831:
+```SQL
+SELECT * FROM creature WHERE guid= 314831;
+```
+Now let's make it complicated for a little bit:
+We want to see all creature with "ID: 32928" and "areaId: 148":
+```SQL
+SELECT * FROM creature WHERE id = 32928 AND areaId = 148;
+``` 
+As you can see here we made two conditions:
+1. ID should be 32928.
+2. AreaId should be 148.
+And we separate these two conditions with "AND".
+
+Now we want to see all NPCs with ID 24248 and ID 36597
+```sql
+SELECT * FROM creature WHERE id IN (24248, 36597);
+```
+As you can see here we are using "IN" instead of = mark.
+We can even add more IDs. For example: 
+```sql
+SELECT * FROM creature WHERE id IN (24248, 36597,32928 );
+```
