@@ -1,1 +1,11 @@
+---
+title: Mehdi Aria.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 theme: jekyll-materialdocs
