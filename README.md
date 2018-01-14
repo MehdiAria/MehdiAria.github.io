@@ -3,7 +3,7 @@ The first question you will maybe ask is "What is a database and why we need to 
 A database is a storage where you can save your information on it. information like: "Where the NPC should?", "What is the NPC name?", "What is the modelID of the game object/NPC?", etc...
 Each database contains some tables.
 "What is a table?"
-- It's where you can save your information on it.
+It's where you can save your information on it.
 For example, if you want to see a table:
 <picture>
 <img src="https://cdn.discordapp.com/attachments/369829063877066752/372053253653004288/2.JPG" alt="" style="width:auto;">
@@ -34,8 +34,9 @@ As you can see there GUID is the key because it's unique for example we can't ha
 GUID and ID, Right? If you don't know just ask me.
 ID and GUID both are unique numbers, ID in creature table is the NPC ID you see in-game, you can use the ID to add a new NPC for example. But what if you have more than 1000 NPCs in-game with same NPC ID? How do you want to address one of them? We use GUID to address all spawned NPCs in-game. For example, if we have 1000 NPCs in-game with same NPC ID and we want to address and delete one of them we use GUID because GUID is unique"
 
-# Getting started with SQL codes
+## Getting started with SQL codes
 **Searching on a specific table**
+
 Imagine you want to make sure if the NPC 44110 is already spawned in-game or not? Or you need the exact location of the NPC? Or you need to know the NPC respawn time, etc...
 So you have to find your creature in this long list
 <picture>
