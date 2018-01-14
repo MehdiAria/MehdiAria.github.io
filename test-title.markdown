@@ -42,7 +42,7 @@ GUID and ID, Right? If you don't know just ask me.
 ID and GUID both are unique numbers, ID in creature table is the NPC ID you see in-game, you can use the ID to add a new NPC for example. But what if you have more than 1000 NPCs in-game with same NPC ID? How do you want to address one of them? We use GUID to address all spawned NPCs in-game. For example, if we have 1000 NPCs in-game with same NPC ID and we want to address and delete one of them we use GUID because GUID is unique"
 
 ## Getting started with SQL codes
-**Searching on a specific table**
+**Searching on a specific table:**
 
 Imagine you want to make sure if the NPC 44110 is already spawned in-game or not? Or you need the exact location of the NPC? Or you need to know the NPC respawn time, etc...
 So you have to find your creature in this long list
@@ -56,3 +56,27 @@ Click on "Query".
 <picture>
 <img src="https://cdn.discordapp.com/attachments/369829063877066752/372058231280893953/6.JPG" alt="" style="width:auto;">
 </picture>
+You will see this window:
+<picture>
+<img src="https://cdn.discordapp.com/attachments/369829063877066752/372058297806749716/7.JPG" alt="" style="width:auto;">
+</picture>
+1. Where you write your queries.
+2. Where you see the result.
+**SELECT:**
+The simple structure of a searching query is like this:
+```SQL
+SELECT * FROM creature WHERE id = 32928;
+```
+Click on "Execute SQL..." (Marked on the picture below) - Or you can press F9.
+<picture>
+<img src="https://cdn.discordapp.com/attachments/369829063877066752/372058914927149056/8.JPG" alt="" style="width:auto;">
+</picture>
+Using this query you can find all spawned NPCs with 32928.
+Explanation:
+1. SELECT: It's a Keyword and you have to write it exactly like this.
+2. * : Star mark means "ALL": As you could see in the previous picture you could see "ALL" fields. (Will be explained later).
+3. FROM: Another keyword.
+4. creature: This is your table name.
+5. WHERE: This is another keyword, after "WHERE" you have to write your condition.
+6. id = 32928: the condition. For example, if you have too many data on your table and you want to see just data with ID 32928 you have to use conditions and filter the output.
+7. ";" : Don't forget to finish all your query lines with";" mark. If you don't put the ";" your query line won't end up.
