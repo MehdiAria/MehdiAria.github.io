@@ -150,3 +150,118 @@ Use ' on numeric values, and you can use " for text string values.
 Try to separate the condition with )(.
 here you can find more information about SELECT:
 [https://www.w3schools.com/sql/sql_select.asp](https://www.w3schools.com/sql/sql_select.asp)
+
+**Editing data in a specific table:**
+In order to edit rows (Field values), we use "UPDATE".
+The simple structure of query is like this:
+```sql
+UPDATE `creature` SET `spawntimesecs`='60' WHERE (`ID`='56509');
+```
+1. UPDATE: It's a keyword just like SELECT, FROM, etc...
+2. creature: Table name.
+3. SET: another keyword.
+4. spawntimesecs='60': The field name you want to change and the value you want to set into the field.
+Note: If you are going to set a string text into the field I would recommend you to use "".
+For example, SET name="Firestorm"
+However '' is working as well, but better to use "".
+'' is for characters and "" is for a text string.
+6. (ID='56509'): It's our condition, conditions have explained before. It's just the same.
+This will change spawntimesecs to 60 whenever the NPC ID is 56509.
+Another example:
+This will change position_z to -0.113633 and position_y to -96.8534 for all NPCs with ID 32928:
+```sql
+UPDATE `creature` SET `position_y`='-96.8534', `position_z`='-0.113633' WHERE (`id`='32928');
+```
+As you can see we can separate fields with a "," and we can add even more fields like this.
+
+**Adding new row to a specific table:**
+We use INSERT in order to add a new row in our table.
+Here is the simple structure:
+```sql
+INSERT INTO `creature` (`guid`, `id`,`spawntimesecs`) VALUES ('2999945', '500','20');
+```
+1. INSERT INTO: Keyword.
+2. creature: Table name.
+3. (guid, id,spawntimesecs): The fields you want to fill, you can add more or fewer fields and you should separate them with a ",".
+4. VALUES: Keyword.
+5. ('2999945', '500','20'): the values you want to set into mentioned fields.
+As you can see in creature table there are many other fields but we didn't use them, we just used 3 fields. guid, id, and spawntimesecs.
+The question is "What happened to other fields like Map, position_x, ZoneId, etc...?"
+The answer is pretty simple, the default value. There is a default value for each field. usually, the default value is 0, -1 or 1.
+So if you don't mention a field you will have a default value on it but it's not the same for all fields and all tables, sometimes you have to fill the field.
+However, there are many other structures for INSERT.
+For example:
+```sql
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+```
+Here you will mention all fields and this query is too long and this will take time to write it, but the output is same as previous method.
+Check this query:
+```sql
+UPDATE `creature` SET `spawntimesecs`='60' WHERE (`ID`='56509');
+```
+We have more than one creature with ID 56509, And this query will change spawntimesecs of all creatures to 60.
+Sometimes especially when we are adding some creatures we have to do hundreds of INSERTs, this will be hard to write queries in this case and this takes too much time.
+Again there are many methods and structures for it.
+The first method is to repeat the SQL lines 100 times. And you will have 100 queries like this:
+But you can also make it just with one single query:
+```sql
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
+('2999946', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
+('2999947', '501', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
+('2999948', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+```
+As you can see this time we used didn't repeat the field names and we used a "," after each row, but still we have to use ";" in the end of query.
+and we can even add more line like that.
+You may ask what is the difference between this method (One query) and the previous method (multiple queries)?
+The answer depends on table and data you use, but usually, one query method is faster. However, this will consume more RAM.
+All these lines should be added to the same table, in other words, you can't add rows like that to more than one table.
+Here GUID is the primary key and you have to always search for a free number for it, otherwise, you will get an error when you want to execute the query.
+Some people will use random big numbers, But it's not logical. Because will have to find many random numbers.
+So what we have to do?
+As I told before there is a default value for each field. It's the same for GUID.
+When you INSERT something, try to don't fill the GUID and leave it "NULL". Because it's auto-fill and automatically you will have the lowest unique value in this field.
+Note: NULL means nothing. Exactly nothing, not even 0, not even an empty space.
+"How can we do the INSERT in the correct way?"
+There two methods:
+First method:
+```sql
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+```
+GUID value is NULL in this case. It's '' and'' means NULL.
+Second method:
+```sql
+INSERT INTO `creature` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+```
+Thi time GUID field name doesn't even exist on field names so it will be given a default unique value and also considered NULL.
+There is a difference between first and second method on the first method you will get warnings because you actually mentioned the field name but you didn't put anything on it. that's I would recommend you to use the second method.
+**Deleting data in a specific table:**
+This one really simple and it's just like SELECT.
+For example, we want to DELETE all creatures in-game with NPC ID 32890:
+```sql
+DELETE FROM creature WHERE (`Id` = '32890');
+```
+Compare it to SELECT:
+```sql
+SELECT * FROM creature WHERE (`Id` = '32890');
+```
+It's quite simple.
+As you see we can just replace "SELECT *" with "DELETE".
+And again we can change conditions too.
+
+**Standards:**
+If you are going to release your SQL codes with others you should remember some standards.
+Simply, open a text editor, write queries on it and save the file with.SQL suffix. For example test.SQL
+You can also use Notepad++
+Important: In your file always DELETE everything you want to INSERT before the INSERT.
+Look this INSERT code:
+```sql
+INSERT INTO `creature` (`id`,`map`) VALUES ('400' , '530');
+```
+If you add this to your file and execute the file twice, you will get an error.
+Or this will add another creature you don't need it at all.
+So you have to use DELETE before this code and remove the possible duplicated one.
+Like this:
+```sql
+DELETE FROM `creature` WHERE (`id` = '400');
+INSERT INTO `creature` (`id`,`map`) VALUES ('400' , '530'); 
+```
