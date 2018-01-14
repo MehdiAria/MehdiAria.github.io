@@ -153,7 +153,8 @@ So if you don't mention a field you will have a default value on it but it's not
 However, there are many other structures for INSERT.
 For example:
 ```sql
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
 ```
 Here you will mention all fields and this query is too long and this will take time to write it, but the output is same as previous method.
 Check this query:
@@ -166,7 +167,8 @@ Again there are many methods and structures for it.
 The first method is to repeat the SQL lines 100 times. And you will have 100 queries like this:
 But you can also make it just with one single query:
 ```sql
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+('2999945', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
 ('2999946', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
 ('2999947', '501', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0'),
 ('2999948', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
@@ -186,12 +188,14 @@ Note: NULL means nothing. Exactly nothing, not even 0, not even an empty space.
 There two methods:
 First method:
 ```sql
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+('', '500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
 ```
 GUID value is NULL in this case. It's '' and'' means NULL.
 Second method:
 ```sql
-INSERT INTO `creature` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES ('500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
+INSERT INTO `creature` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+('500', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '120', '0', '0', '1', '0', '0', '0', '0', '0', '', '0');
 ```
 Thi time GUID field name doesn't even exist on field names so it will be given a default unique value and also considered NULL.
 There is a difference between first and second method on the first method you will get warnings because you actually mentioned the field name but you didn't put anything on it. that's I would recommend you to use the second method.
