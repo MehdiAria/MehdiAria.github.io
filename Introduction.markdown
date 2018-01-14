@@ -133,3 +133,20 @@ SELECT position_x FROM creature WHERE id = 36597;
 ```
 As you can see here we used position_x instead of (*) star mark because we just want to see the value of position_x, not all fields.
 We can even combine.
+For example, we need position_x, position_y, position_z of NPC 36597:
+```sql
+SELECT position_x,position_y,position_z FROM creature WHERE id = 36597;
+```
+As you can see here we separate field names with a "," and we can add many fields like that.
+Now you can combine every I told you so far and create your own queries.
+Attention: I would highly recommend you to use )`'( in your queries to avoid possible collisions.
+For example, we want to make the last query look better and avoid the possible collisions:
+```sql
+SELECT `position_x`,`position_y`,`position_z` FROM `creature` WHERE (`id` = '36597');
+```
+Attention to the marks.
+Use ` on table names and field names.
+Use ' on numeric values, and you can use " for text string values.
+Try to separate the condition with )(.
+here you can find more information about SELECT:
+https://www.w3schools.com/sql/sql_select.asp
