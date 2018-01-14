@@ -64,7 +64,7 @@ You will see this window:
 2. Where you see the result.
 **SELECT:**
 The simple structure of a searching query is like this:
-```SQL
+```sql
 SELECT * FROM creature WHERE id = 32928;
 ```
 Click on "Execute SQL..." (Marked on the picture below) - Or you can press F9.
@@ -82,25 +82,25 @@ Explanation:
 7. ";" : Don't forget to finish all your query lines with";" mark. If you don't put the ";" your query line won't end up.
 Example:
 Wrong type:
-```SQL
+```sql
 SELECT * FROM creature WHERE id = 32928
 SELECT * FROM creature WHERE id = 32927
 =
 SELECT * FROM creature WHERE id = 32928SELECT * FROM creature WHERE id = 32927
 ```
 Correct type:
-```SQL
+```sql
 SELECT * FROM creature WHERE id = 32928;
 SELECT * FROM creature WHERE id = 32927;
 ```
 More examples:
 This will give you all results with GUID 314831:
-```SQL
+```sql
 SELECT * FROM creature WHERE guid= 314831;
 ```
 Now let's make it complicated for a little bit:
 We want to see all creature with "ID: 32928" and "areaId: 148":
-```SQL
+```sql
 SELECT * FROM creature WHERE id = 32928 AND areaId = 148;
 ``` 
 As you can see here we made two conditions:
