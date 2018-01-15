@@ -14,7 +14,8 @@ For example, We have an NPC with flag = 5 on creature_template. Now if we change
 
 | Fields | Information |
 | ------ | ------ |
-| Entry  | The NPC ID, just like ID in creature table. Because they are linked. Entry in creature_template is a primary key and in creature table, the field name will be ID and it’s a foreign key.
+| guid   | (Primary key) This is a unique number for each spawned creature and we can address the creatures using GUID. **guid can be different to one realm to other** Because as I told you before core will fill the GUID value.
+|   Id   | This is the entry of the NPC. You can find it using.NPC info or in WoWhead http://www.wowhead.com/npc=56041 Id=56041
 
 ## Table Name
 
