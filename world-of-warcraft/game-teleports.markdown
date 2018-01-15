@@ -7,10 +7,11 @@ parent: world-of-warcraft.md
 
 ## [Game Teleports](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
 
-If you in-game and use the .tele add and .tele delete commands you can add the new teleport location in your database and all save teleport locations are stored in this table.\
+If you in-game and use the .tele add and .tele delete commands you can add the new teleport location in your database and all save teleport locations are stored in this table.
+
 {:.table}
-| Fields | Information |
-| ------ | ------ |
+| Field | Description |
+| ----- | ----------- |
 | `id` | The ID of the teleport location. This number is unique to every location added. |
 | `position_x` | The x-axis coordinate of the teleport location. This can be attained by using the .gps command. |
 | `position_y` | The y-axis coordinate of the teleport location. This can be attained by using the .gps command. |
