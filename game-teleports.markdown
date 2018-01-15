@@ -1,6 +1,7 @@
 ---
 title: Game Teleports
 date: 2018-01-15 21:20:00 Z
+parent: world-of-warcraft.markdown
 ---
 
 ## [Game Teleports](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
