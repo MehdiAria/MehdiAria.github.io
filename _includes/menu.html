@@ -1,4 +1,4 @@
-{% assign sorted_pages = site.pages | sort: 'weight'%}
+{% assign sorted_pages = site.pages | sort: 'order'%}
 {% for node in sorted_pages %}
   {% if node.menu or node.title %}
     {% unless node.parent %}
