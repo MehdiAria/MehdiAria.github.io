@@ -15,7 +15,9 @@ For example, We have an NPC with flag = 5 on creature_template. Now if we change
 | Fields | Information |
 | ------ | ------ |
 | guid   | (Primary key) This is a unique number for each spawned creature and we can address the creatures using GUID. **guid can be different to one realm to other** Because as I told you before core will fill the GUID value.
-|   Id   | This is the entry of the NPC. You can find it using.NPC info or in WoWhead http://www.wowhead.com/npc=56041 Id=56041
+|   Id   | This is the entry of the NPC. You can find it using.NPC info or in WoWhead. For example, http://www.wowhead.com/npc=56041 Id=56041.
+|Map| You can find the map number using .gps command in-game.
+
 
 ## Table Name
 
