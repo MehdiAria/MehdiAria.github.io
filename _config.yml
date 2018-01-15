@@ -8,7 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-name: Jekyll Docs Theme
+name: Firestorm SQL Tutorials
 project:
   version: 0.1.0
   download_url: https://github.com/allejo/jekyll-docs-theme/releases
