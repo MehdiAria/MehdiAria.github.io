@@ -24,7 +24,26 @@ For example, We have an NPC with flag = 5 on creature_template. Now if we change
 
 ## Table Name
 
-Content
+<table class="template">
+	<thead>
+		<tr>
+			<th>
+				Fields
+			</th>
+			<th>
+				Information
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				test
+			</td>
+			<td>
+				test
+			</td>
+		</tr>
 
 ## Table Name
 
