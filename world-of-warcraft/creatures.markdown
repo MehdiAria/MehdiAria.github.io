@@ -24,26 +24,19 @@ For example, We have an NPC with flag = 5 on creature_template. Now if we change
 
 ## Table Name
 
-<table class="template">
-	<thead>
-		<tr>
-			<th>
-				Fields
-			</th>
-			<th>
-				Information
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				test
-			</td>
-			<td>
-				test
-			</td>
-		</tr>
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #ff0000;
+}
+
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
 
 ## Table Name
 
