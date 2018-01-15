@@ -1,7 +1,7 @@
 ---
 title: Game Teleports
 date: 2018-01-15 21:20:00 Z
-position: 2
+position: 1
 parent: world-of-warcraft.markdown
 ---
 
