@@ -1,10 +1,6 @@
 ---
-title: Firestorm SQL Tutorials
-timezone: UTC
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
+exclude: ['README.markdown']
+permalink: ':title'
+pygments: true
+safe: false
+title: 'Carte'
