@@ -1,9 +1,10 @@
 ---
-category: Stuff
-path: '/stuff'
-title: 'Post a thing'
-type: 'POST'
-
+title: Post a thing
+date: 2012-12-26 00:00:00 Z
+categories:
+- Stuff
+path: "/stuff"
+type: POST
 layout: nil
 ---
 

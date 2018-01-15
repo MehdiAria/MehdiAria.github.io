@@ -1,9 +1,10 @@
 ---
-category: Stuff
-path: '/stuff/:id'
-title: 'Delete a thing'
-type: 'DELETE'
-
+title: Delete a thing
+date: 2012-12-24 00:00:00 Z
+categories:
+- Stuff
+path: "/stuff/:id"
+type: DELETE
 layout: nil
 ---
 
