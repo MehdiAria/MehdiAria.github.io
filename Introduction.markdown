@@ -23,9 +23,7 @@ There are various tools you can use to browse databases, here are a few you can 
 ## Before you begin...
 
 * [CodeCademy's interactive SQL Course](https://www.codecademy.com/learn/learn-sql)
-
 * [W3Schools](https://www.w3schools.com/sql/)
-
 * [Google, your best friend](https://google.com)
 
 Take your pick, learn some basic SQL, and once you feel like you're confident enough to learn, come back and get started!
