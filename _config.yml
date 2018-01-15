@@ -8,9 +8,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-  wow:
-    title: wow
-    output: true
 exclude:
 - README.markdown
 permalink: ":title"
