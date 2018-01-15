@@ -11,13 +11,13 @@ If you in-game and use the .tele add and .tele delete commands you can add the n
 {:.table}
 | Fields | Information |
 | ------ | ------ |
-| id | The ID of the teleport location. This number is unique to every location added. |
-| position_x | The x-axis coordinate of the teleport location. This can be attained by using the .gps command. |
-| position_y | The y-axis coordinate of the teleport location. This can be attained by using the .gps command. |
-| position_z | The z-axis coordinate of the teleport location. This can be attained by using the .gps command. |
-| orientation | The direction that the player will face after arriving at the teleport location. This can be attained by using the .gps command. (North = 0, South = 3.14159) |
-| map | The map ID of the location. |
-| name | A descriptive name for the teleport location. The name cannot have any spaces in it. It is also not recommended to use special characters such as periods, commas, slashes, etc... |
+| `id` | The ID of the teleport location. This number is unique to every location added. |
+| `position_x` | The x-axis coordinate of the teleport location. This can be attained by using the .gps command. |
+| `position_y` | The y-axis coordinate of the teleport location. This can be attained by using the .gps command. |
+| `position_z` | The z-axis coordinate of the teleport location. This can be attained by using the .gps command. |
+| `orientation` | The direction that the player will face after arriving at the teleport location. This can be attained by using the .gps command. (North = 0, South = 3.14159) |
+| `map` | The map ID of the location. |
+| `name` | A descriptive name for the teleport location. The name cannot have any spaces in it. It is also not recommended to use special characters such as periods, commas, slashes, etc... |
 
 ## Example of a Query
 ```sql
