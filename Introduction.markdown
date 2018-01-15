@@ -18,7 +18,7 @@ There are various tools you can use to browse databases, here are a few you can 
 |Name|Link|Type
 |--|--|--|
 |HeidiSQL|https://www.heidisql.com/|Free
-|DBeaver|https://dbeaver.jkiss.org/ |Free
+|DBeaver|https://dbeaver.jkiss.org/|Free
 |SQLYog |https://github.com/webyog/sqlyog-community/wiki/Downloads|Free/Paid
 |Navicat|https://www.navicat.com/en/|Paid
 
