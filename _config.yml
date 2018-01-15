@@ -1,5 +1,5 @@
 ---
-title: Carte
+title: Firestorm SQL Tutorials
 timezone: UTC
 collections:
   posts:
@@ -8,8 +8,3 @@ collections:
   uploads:
     title: Uploads
     output: true
-exclude:
-- README.markdown
-permalink: ":title"
-pygments: true
-safe: false
