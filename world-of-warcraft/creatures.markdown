@@ -14,12 +14,7 @@ For example, We have an NPC with flag = 5 on creature_template. Now if we change
 
 | Fields | Information |
 | ------ | ------ |
-| Entry  | The NPC ID, just like ID in creature table. Because they are linked.
-Entry in creature_template is a primary key and in creature table, the field name will be ID and it’s a foreign key.
-| 
-|
-|
-|
+| Entry  | The NPC ID, just like ID in creature table. Because they are linked. Entry in creature_template is a primary key and in creature table, the field name will be ID and it’s a foreign key.
 
 ## Table Name
 
