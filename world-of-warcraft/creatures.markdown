@@ -56,7 +56,23 @@ This template table has whole the data about one creatures. When you want to add
 | Speed_walk, speed_run | Controls how fast the creature can run/walk | 
 | Scale | Controls the size of the creature appears in-game | 
 | Rank | The rank of the creature. You can change the respawn of the creature here. | 
-| Dmgschool | creature's damage type. For example shadow, holy, etc... | 
-
+| Dmgschool | Creature's damage type. For example shadow, holy, etc... | 
+| Attackpower | Aattack power of Creature's melee attacks. |
+| Dmg_multiplier | The critical damage. for example, if the NPC should dose 3 damage and you make dmg_multiplier 5 that NPC can hit the target for 5*3=15. |
+| Baseattacktime | It's about attack speed and how long the NPC should wait before each melee attack. |
+| Rangeattacktime | It's about attack speed and how long the NPC should wait before each ranged attack. |
+| unit_class | This field controls the type of the creature. For example, warrior, mage, etc... (This will effect with heal type and mana type). |
+| unit_flags | Controls some other flags. For example, you can make the NPC can't attack, immune, etc.... |
+| unit_flags2 | Same as unit_flags. |
+| dynamicflags | The visual appearance of the creature. For example, you can make the creature show up as a little dot in minimap. |
+| Family | If you want the NPC to be a member of wolf family, bat, crab, etc... |
+| trainer_type | If the made the NPC a trainer before you have change this flag and write the type of the trainer. |
+| type | creature's type |
+| lootid | A foreign key to loot tables |
+| resistance1-6 | Fire, holy, shadow, etc.. resistance. |
+| Spell1-6 | The spell that the creature should use.
+Note: If the NPC is vehicle: these spell will apear in action bar|
+| VehicleId | If the NPC is a vehicle you will write vehicle type id here. (Comes from sniff) |
+| mingold, maxgold | minimum and maximum gold you will get if you kill that npc on loot. |
 ## Example.
 Content.
