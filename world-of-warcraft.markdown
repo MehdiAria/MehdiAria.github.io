@@ -4,6 +4,7 @@ date: 2018-01-15 23:43:00 Z
 ---
 
 # Tutorials
+## Creatures
 ## [Game Teleports](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
 
 If you in-game and use the .tele add and .tele delete commands you can add the new teleport location in your database and all save teleport locations are stored in this table.
@@ -19,7 +20,7 @@ If you in-game and use the .tele add and .tele delete commands you can add the n
 | `map` | The map ID of the location. |
 | `name` | A descriptive name for the teleport location. The name cannot have any spaces in it. It is also not recommended to use special characters such as periods, commas, slashes, etc... |
 
-Example of a Query
+### Example of a Query
 ```sql
 INSERT INTO
 ```
