@@ -30,11 +30,7 @@ But remember all data from creature table will overwrite the data on the creatur
 |curhealth| |The health that the creature will spawn with.|
 |curmana| |The mana that the creature will spawn with.|
 |MovementType| |There are 3 possible numbers for this field. 0= the NPC will just stay and won’t move, 1=Random movement and 2= Waypoint movement: The NPC will move in a specified line|
-|InhabitType| ||
-|| ||
-|| ||
-|| ||
-|| ||
+
 ## Second Table here.
 Content.
 
