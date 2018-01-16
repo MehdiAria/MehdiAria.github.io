@@ -5,15 +5,8 @@ date: 2018-01-15 23:43:00 Z
 
 # Tutorials
 ## Creatures
----
-title: Creatures
-date: 2018-01-15 05:12:00 Z
-position: 1
-order: 2
-parent: world-of-warcraft.markdown
----
 
-## [creature](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
+# [creature](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
 All spawned creatures(NPCs) are saved into creature table.
 A few of these fields are also repeated in table creature_template (we are going to explain about the creature_template table later)
 But remember all data from creature table will overwrite the data on the creature_template table.
