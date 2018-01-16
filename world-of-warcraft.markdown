@@ -4,9 +4,9 @@ date: 2018-01-15 23:43:00 Z
 ---
 
 # Tutorials
-## Creatures
+# Creatures
 
-# [creature](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
+## [creature](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele)
 All spawned creatures(NPCs) are saved into creature table.
 A few of these fields are also repeated in table creature_template (we are going to explain about the creature_template table later)
 But remember all data from creature table will overwrite the data on the creature_template table.
@@ -44,7 +44,7 @@ td{
 Content
 
 
-## Game Teleports
+# Game Teleports
 
 If you in-game and use the .tele add and .tele delete commands you can add the new teleport location in your database and all save teleport locations are stored in this table. Read more on [Game Teleports](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele).
 
