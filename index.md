@@ -4,7 +4,7 @@ homepage: true
 layout: page
 ---
 
-## Introduction
+# Introduction
 Basic text introduction of the site.
 
 ## Tools
