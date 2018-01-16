@@ -24,7 +24,7 @@ But remember all data from creature table will overwrite the data on the creatur
 |phasemask| This field describes all the phases that a creature will appear in. You can change the play's phase by spells. For example, If you get targeted with a spell to change your phase to 1 you only will see NPCs in phase 1, If you're in phase 3, you will see NPCs in phase 2 and phase 1(2+1=3). http://www.wowhead.com/spell=55782/phase-shift-1-foote-steppes|
 |Modelid| ModelID/MorphID of the NPC|
 |Equipment_id| (Foreign key) this field can link your table to |
-|Position_x, position_y, position_z| |The exact position of the creature in-game.|
+|Position_x, position_y, position_z| The exact position of the creature in-game.|
 |Spawntimesecs| The spawn time of the creature (In seconds)|
 |Spawndist| The maximum distance for the creature to walk around with random movements(only works if the creature has MovementType = 1 in creature table or creature_template table)|
 |curhealth| The health that the creature will spawn with.|
