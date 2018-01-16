@@ -5,6 +5,8 @@ date: 2018-01-15 23:43:00 Z
 
 # Tutorials
 ## Creatures
+Content Here.
+
 ## Game Teleports
 
 If you in-game and use the .tele add and .tele delete commands you can add the new teleport location in your database and all save teleport locations are stored in this table. Read more on [Game Teleports](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130150/game\+tele).
