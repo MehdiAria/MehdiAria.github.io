@@ -37,6 +37,7 @@ But remember all data from creature table will overwrite the data on the creatur
 
 ## CREATURE_TEMPLATE Table.
 This template table has whole the data about one creatures. When you want to add npc with creature table or in-game you have to make sure if the creature existing in this table. Creature_template is a template for creatures you spawn them in creature table. When you spawn a creature in-game or with creature table they inherit their field values from creature_template. But if you change anything on creatures table this will be overwritten for that specified creature with specified GUID.
+
 {:.table}
 | Field | Description |
 | ----- | ----------- |
