@@ -70,9 +70,9 @@ This template table has whole the data about one creatures. When you want to add
 | type | creature's type |
 | lootid | A foreign key to loot tables |
 | resistance1-6 | Fire, holy, shadow, etc.. resistance. |
-| Spell1-6 | The spell that the creature should use.
-Note: If the NPC is vehicle: these spell will apear in action bar|
+| Spell1-6 | The spell that the creature should use. Note: If the NPC is vehicle: these spell will apear in action bar|
 | VehicleId | If the NPC is a vehicle you will write vehicle type id here. (Comes from sniff) |
 | mingold, maxgold | minimum and maximum gold you will get if you kill that npc on loot. |
+
 ## Example.
 Content.
