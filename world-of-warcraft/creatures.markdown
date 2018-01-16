@@ -16,7 +16,7 @@ But remember all data from creature table will overwrite the data on the creatur
 {:.table}
 | Field | Description |
 | ----- | ----------- |
-| guid   | (Primary key) This is a unique number for each spawned creature and we can address the creatures using GUID. **guid can be different to one realm to other** Because as I told you before core will fill the GUID value.|
+| guid   | (Primary key) This is a unique number for each spawned creature and we can address the creatures using GUID. **guid can be different in each realm/server** As explained before GUID is auto-fill and you can just leave this field NULL.|
 |   Id   | This is the entry of the NPC. You can find it using.NPC info or in WoWhead. For example, http://www.wowhead.com/npc=56041 Id=56041.|
 |Map| You can find the map number using .gps command in-game.|
 |Spawnmask| Controls under which difficulties the creature is spawned. And you can combine the values here. For example, 2+8=10 so if you put 10 here the npc will be spawned in 25 normal and heroic modes.|
