@@ -50,7 +50,7 @@ This template table has whole the data about one creatures. When you want to add
 | `IconName` | Used to tell the player what kind of NPC is this. For example, when you mouse over on some creatures the cursor icon will be changed to a winged shoe. | 
 | `gossip_menu_id` | This is a foreign for gossip menus (When you click on some creatures a window will appear with some texts and options we call that gossip menu) | 
 | `minlevel-maxlevel` | The minimum and maximum level of the creature. | 
-| Exp |  Can take values from 0 to 2 you can check the creature_classlevelstats table | 
+| `Exp` |  Can take values from 0 to 2 you can check the creature_classlevelstats table | 
 | `Faction_A and faction_H` | In some databases, you have just one "Faction" and in other DBs you have both. It’s the faction ID of the creature | 
 | `Npcflag` | This field controls a falg about the NPC to make it repairer, vendor, etc.. You can combine values here.For example, if the NPC is a quest giver and repairer you have to put 4098 (4096 for repairer and 2 for quest giver) | 
 | `Speed_walk, speed_run` | Controls how fast the creature can run/walk | 
@@ -61,7 +61,7 @@ This template table has whole the data about one creatures. When you want to add
 | `Dmg_multiplier` | The critical damage. for example, if the NPC should dose 3 damage and you make dmg_multiplier 5 that NPC can hit the target for 5*3=15. |
 | `Baseattacktime` | It's about attack speed and how long the NPC should wait before each melee attack. |
 | `Rangeattacktime` | It's about attack speed and how long the NPC should wait before each ranged attack. |
-| `unit_clas`s | This field controls the type of the creature. For example, warrior, mage, etc... (This will effect with heal type and mana type). |
+| `unit_class` | This field controls the type of the creature. For example, warrior, mage, etc... (This will effect with heal type and mana type). |
 | `unit_flags` | Controls some other flags. For example, you can make the NPC can't attack, immune, etc.... |
 | `unit_flags2` | Same as unit_flags. |
 | `dynamicflags` | The visual appearance of the creature. For example, you can make the creature show up as a little dot in minimap. |
