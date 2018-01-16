@@ -29,13 +29,13 @@ But remember all data from creature table will overwrite the data on the creatur
 |Spawndist| The maximum distance for the creature to walk around with random movements(only works if the creature has MovementType = 1 in creature table or creature_template table)|
 |curhealth| The health that the creature will spawn with.|
 |curmana| The mana that the creature will spawn with.|
-|MovementType| There are 3 possible numbers for this field. 0= the NPC will just stay and won’t move, 1=Random movement and 2= Waypoint movement: The NPC will move in a specified line|
+|MovementType| There are 3 possible numbers for this field. 0= the NPC will just stay and won’t move, 1=Random movement and 2= Waypoint movement: The NPC will move in a specified line.|
 |InhabitType| Controls where the creature can move and attack.(You can combine)|
 |Npcflag/unit_flags/dynamicflags |Some special flags. For example you make the creature to be quest giver with npc falgs. |
 | Map | You can find the map number using .gps command in-game.|
 
 
-## CREATURE_TEMPLATE Table.
+## Creature_template Table.
 This template table has whole the data about one creatures. When you want to add npc with creature table or in-game you have to make sure if the creature existing in this table. Creature_template is a template for creatures you spawn them in creature table. When you spawn a creature in-game or with creature table they inherit their field values from creature_template. But if you change anything on creatures table this will be overwritten for that specified creature with specified GUID.
 
 {:.table}
@@ -73,6 +73,19 @@ This template table has whole the data about one creatures. When you want to add
 | Spell1-6 | The spell that the creature should use. Note: If the NPC is vehicle: these spell will apear in action bar|
 | VehicleId | If the NPC is a vehicle you will write vehicle type id here. (Comes from sniff) |
 | mingold, maxgold | minimum and maximum gold you will get if you kill that npc on loot. |
+| AIName | Using this field you can script the creature on database side. For example: SMARTAI. Note: The NPC can't take both AIName and ScriptName. |
+| MovementType | There are 3 possible numbers for this field. 0= the NPC will just stay and won’t move, 1=Random movement and 2= Waypoint movement: The NPC will move in a specified line. |
+| InhabitType | Controls where the creature can move and attack.(You can combine values) |
+| Health_mod | Used to modify the maximum health points the creature can have. |
+| Mana_mod | Used to modify the maximum mana points the creature can have.  |
+| Armor_mod | Used to modify the  armor of the creature. |
+| RegenHealth | Can take only two values, 0 or 1 if you want to regenerate hp or not |
+| Mechanic_immune_mask | Used to immune the npc on some spells |
+| Flags_extra | Anther flag to make the npc not parry, visible just with .gm on, etc... |
+| ScriptName | The name of the script that this creature uses from core side. Note: The NPC can't take both AIName and ScriptName. |
 
-## Example.
-Content.
+## Creature_addon Table
+
+{:.table}
+| Field | Description |
+| ----- | ----------- |
