@@ -42,7 +42,8 @@ This template table has whole the data about one creatures. When you want to add
 | Field | Description |
 | ----- | ----------- |
 | Entry | (primary key)The NPC ID, just like ID in creature table. Because they are linked. |
-| difficulty_entry_1-3 | The Id of the creature in different difficulties (Used for loot stuff). |  | KillCredit1-3 | When you kill the NPC you will get that credit ID (Used for quests). | 
+| difficulty_entry_1-3 | The Id of the creature in different difficulties (Used for loot stuff). |  
+| KillCredit1-3 | When you kill the NPC you will get that credit ID (Used for quests). | 
 | modelid1-3 | A modelID(morph ID) of the creature. | 
 | name | The creature's name | 
 | Subname | the subname of the creature. Will appear on <Subname here> | 
