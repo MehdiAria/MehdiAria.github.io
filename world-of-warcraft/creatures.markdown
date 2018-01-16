@@ -31,7 +31,7 @@ But remember all data from creature table will overwrite the data on the creatur
 |`curmana`| The mana that the creature will spawn with.|
 |`MovementType`| There are 3 possible numbers for this field. 0= the NPC will just stay and won’t move, 1=Random movement and 2= Waypoint movement: The NPC will move in a specified line.|
 |`InhabitType`| Controls where the creature can move and attack.(You can combine)|
-|Npcflag/unit_flags/dynamicflags |Some special flags. For example you make the creature to be quest giver with npc falgs. |
+|`Npcflag/unit_flags/dynamicflags` |Some special flags. For example you make the creature to be quest giver with npc falgs. |
 | `Map` | You can find the map number using .gps command in-game.|
 
 
