@@ -21,7 +21,8 @@ If you in-game and use the .tele add and .tele delete commands you can add the n
 | `map` | The map ID of the location. |
 | `name` | A descriptive name for the teleport location. The name cannot have any spaces in it. It is also not recommended to use special characters such as periods, commas, slashes, etc... |
 
-Example of a Query
+
+**Example of inserting a teleport into the database;**
 ```sql
 INSERT INTO
 ```
