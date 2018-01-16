@@ -89,3 +89,4 @@ This template table has whole the data about one creatures. When you want to add
 {:.table}
 | Field | Description |
 | ----- | ----------- |
+| content | content |
