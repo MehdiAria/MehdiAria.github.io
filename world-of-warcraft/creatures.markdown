@@ -1,7 +1,6 @@
 ---
 title: Creatures
 date: 2018-01-16 00:25:00 Z
-published: false
 position: 0
 parent: world-of-warcraft.markdown
 ---
