@@ -10,10 +10,13 @@ Basic text introduction of the site.
 ## Tools
 There are various tools you can use to browse databases, here are a few you can use that are free/paid.
 
-* [HeidiSQL](https://www.heidisql.com/) — Free.
-* [DBeaver](https://dbeaver.jkiss.org/) — Free.
-* [SQLYog](https://github.com/webyog/sqlyog-community/wiki/Downloads) — Free/Paid.
-* [Navicat](https://www.navicat.com/en/) — Paid.
+{:.table}
+| Name | Type |
+| ----- | ----------- |
+| [HeidiSQL](https://www.heidisql.com/) | Free.
+| [DBeaver](https://dbeaver.jkiss.org/) | Free.
+| [SQLYog](https://github.com/webyog/sqlyog-community/wiki/Downloads) | Free/Paid.
+| [Navicat](https://www.navicat.com/en/) | Paid.
 
 ## Before you begin...
 * [CodeCademy's interactive SQL Course](https://www.codecademy.com/learn/learn-sql)
