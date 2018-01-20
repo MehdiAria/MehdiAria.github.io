@@ -105,6 +105,7 @@ Field names are also same on both tables.
 ## creature_equip_template Table
 
 This table contains all the equipment combinations that can be sent for each creature.
+
 {:.table}
 | Field | Description |
 | ----- | ----------- |
