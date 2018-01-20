@@ -36,6 +36,7 @@ But remember all data from creature table will overwrite the data on the creatur
 
 
 ## Creature_template Table.
+
 This template table has whole the data about one creatures. When you want to add npc with creature table or in-game you have to make sure if the creature existing in this table. Creature_template is a template for creatures you spawn them in creature table. When you spawn a creature in-game or with creature table they inherit their field values from creature_template. But if you change anything on creatures table this will be overwritten for that specified creature with specified GUID.
 
 {:.table}
@@ -84,9 +85,30 @@ This template table has whole the data about one creatures. When you want to add
 | `Flags_extra` | Anther flag to make the npc not parry, visible just with .gm on, etc... |
 | `ScriptName` | The name of the script that this creature uses from core side. Note: The NPC can't take both AIName and ScriptName. |
 
-## Creature_addon Table
+## Creature_addon and Creature_template_addon Tables
+
+Using these two tables you can add some more details to the creature.
+Also, just like Creature table and Creature_Template tables, there is a relation between these two addon tables and creature_addon can overwrite creature_template_addon table.
+Field names are also same on both tables.
 
 {:.table}
 | Field | Description |
 | ----- | ----------- |
-| content | content |
+| `Entry/GUID` | On creature_addon you have GUID and on creature_template_addon you have Entry. you will use this field to address the creature. |
+| `Path_id` | Using this field you can make a relation to  waypoint_data. |
+| `Mount` |  Mount ID of the creature, this will make the creature to always use a mount. |
+| `Bytes1` | Using this field you can make the creature sit, sleep, kneel, etc... |
+| `Bytes2` | If you want the creature to hold his weapon in his hand (prepared) or not prepared you can use this field. |
+| `Emote` | Here you can make the creature to continually use an emote ID for example, wave,dance,... . |
+| `Auras` | Aura IDs you want the NPC always have them. IF you want the creature t have more than one aura you can separate the auras using space. For example, '589 32379' = Shadow Word: Pain + Shadow Word: Death. |
+
+## creature_equip_template Table
+
+This table contains all the equipment combinations that can be sent for each creature.
+{:.table}
+| Field | Description |
+| ----- | ----------- |
+| `CreatureID` | The creature's ID. in some datebases you have equipment_id on creature table or creature _template, If you have the equipment_id field you have to change equipment_id to NPC ID and then you can make the relation. |
+| `ID` | If you are going to make the creature to use more than one equipment you will need too use this identifier field. Note: you should start with 1 here. |
+| `ItemID1-3` | The ID of items you want the NPC to use them |
+
